@@ -107,3 +107,13 @@ function hanoi(height,fromT,toT,withT){
 		hanoi(height-1,withT,toT,fromT);
 	}
 }
+
+function replay(){
+  
+  noLoop();
+  moves = [];
+  i = 0;
+  setup();
+  loop();
+  
+}

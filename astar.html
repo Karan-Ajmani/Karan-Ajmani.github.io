@@ -70,17 +70,25 @@
 
 <div class="articles">
 
-	<article>
+	<article class="post">
 		
-		<script src="/dino/sketch.js" type="text/javascript"></script>
-		<script src="/dino/dinosaur.js" type="text/javascript"></script>
-		<script src="/dino/road.js" type="text/javascript"></script>
-		<script src="/dino/cacti.js" type="text/javascript"></script>
-		<script src="/dino/clouds.js" type="text/javascript"></script>
-		<script src="/dino/sun.js" type="text/javascript"></script>
+		<script src="/astar/cell.js" type="text/javascript"></script>
+		<script src="/astar/hexacell.js" type="text/javascript"></script>
+		<script src="/astar/sketch.js" type="text/javascript"></script>
 
-		<h4 style="padding-left:25%;">Google Chrome T-rex game in p5.js</h4>
-		<div id="t-rex-game" style="min-height:500px;min-width:650px"></div>
+		<div class = "centered" style="text-align:center">
+        	Maze Generator + Pathfinder (using A*) in p5.js
+
+		    <div id="choice" style="margin-top:10px;margin-bottom:25px;">
+		        <select id="maze-select" onchange="resetcanvas(this.value)">
+		        <option value="square">Square Grid</option>
+		        <option value="hexa">Hexagonal Grid</option>
+		        </select>
+		    </div>
+
+	        <div id="maze" style="margin-top:10px;min-height:600px;min-width:600px"></div>
+		</div>
+
 
 	</article>
 

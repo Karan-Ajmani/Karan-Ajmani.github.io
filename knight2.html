@@ -70,17 +70,36 @@
 
 <div class="articles">
 
-	<article>
+	<article class="post">
 		
-		<script src="/dino/sketch.js" type="text/javascript"></script>
-		<script src="/dino/dinosaur.js" type="text/javascript"></script>
-		<script src="/dino/road.js" type="text/javascript"></script>
-		<script src="/dino/cacti.js" type="text/javascript"></script>
-		<script src="/dino/clouds.js" type="text/javascript"></script>
-		<script src="/dino/sun.js" type="text/javascript"></script>
+		<script src="/knight2/cell.js" type="text/javascript"></script>
+		<script src="/knight2/sketch.js" type="text/javascript"></script>
 
-		<h4 style="padding-left:25%;">Google Chrome T-rex game in p5.js</h4>
-		<div id="t-rex-game" style="min-height:500px;min-width:650px"></div>
+		<div class = "centered" style="text-align:center">
+			<p>
+		       Knight's Tour (<a href="https://en.wikipedia.org/wiki/Knight's_tour">Wiki</a>) with Backtracking in p5.js
+		     <br><br>
+		    <span class="message" style="margin-top:5px"> Check out the tour with Warnsdorf's heuristic - <a href="../knight1/">Here</a>.</span>
+		    <br><br>
+		    </p>
+		    <h4>Select board size - 
+		    <select id="changeButton" onchange="setBoardSize(this.value)">
+		        <option value="5">5</option>
+		        <option value="6" selected="selected">6</option>
+		        <option value="7">7</option>
+		        <option value="8">8</option>
+		    </select>
+		    </h4>
+		    <div class="scoreboard">
+		        <div id="target" style="width:100px;float:left;margin-left:5px;"></div>
+		        <div id="current" style="width:150px;float:left;margin-left:5px;"></div>
+		        <div id="maxlen" style="width:150px;float:left;margin-left:5px;"></div>
+		    </div>
+		        <div id="board" style="min-height:300px;min-width:450px;"></div><br>
+		        <p><span class="message">P.S. This might take a while to complete the tour.</span></p><br>
+		    <button id="reset" onclick="replay();" class="replay">Replay</button>
+		    
+		</div>
 
 	</article>
 

@@ -71,16 +71,19 @@
 <div class="articles">
 
 	<article>
-		
-		<script src="/dino/sketch.js" type="text/javascript"></script>
-		<script src="/dino/dinosaur.js" type="text/javascript"></script>
-		<script src="/dino/road.js" type="text/javascript"></script>
-		<script src="/dino/cacti.js" type="text/javascript"></script>
-		<script src="/dino/clouds.js" type="text/javascript"></script>
-		<script src="/dino/sun.js" type="text/javascript"></script>
 
-		<h4 style="padding-left:25%;">Google Chrome T-rex game in p5.js</h4>
-		<div id="t-rex-game" style="min-height:500px;min-width:650px"></div>
+	<div class="centered">
+		<h4>Minesweeper in Processing</h4><br>
+		<div class="canvas">
+			<canvas id="mycanvas" data-processing-sources="minesweeper/minesweeper.pde"></canvas>
+		</div>
+		<button id="reset" onclick="replay();" class="replay">Reset</button>
+		<p>
+			<span class="message">Embedded using <a href="http://processingjs.org/">ProcessingJs</a>.</span>
+		</p>
+	</div>
+
+
 
 	</article>
 
@@ -137,6 +140,11 @@
 window.onkeydown = function(e) { 
   return !(e.keyCode == 32 && e.target == document.body);
 }; 
+
+function replay(){
+	processingInstance = Processing.getInstanceById('mycanvas');
+	processingInstance.replay();
+}
 </script>
 		
 	</body>

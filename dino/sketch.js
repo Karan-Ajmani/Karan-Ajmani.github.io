@@ -32,16 +32,16 @@ function preload() {
   */
   
   
-  cloudImg = loadImage("public/images/cloud.png");
-  roadImg = loadImage("public/images/road.png");
-  dinoImg = loadImage("public/images/dinosaurs.png");
-  cactiImg[0] = loadImage("public/images/cacti-large.png");
-  cactiImg[1] = loadImage("public/images/cacti-small.png");
+  cloudImg = loadImage("img/cloud.png");
+  roadImg = loadImage("img/road.png");
+  dinoImg = loadImage("img/dinosaurs.png");
+  cactiImg[0] = loadImage("img/cacti-large.png");
+  cactiImg[1] = loadImage("img/cacti-small.png");
   
 }
 
 function setup() {
-  var canvas = createCanvas(650, 300);
+  var canvas = createCanvas(650, 400);
   canvas.parent('t-rex-game');
   //frameRate(60);
   d = new Dinosaur(dinoImg);
